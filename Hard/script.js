@@ -50,7 +50,6 @@ The object should have at least two properties: name and SSN.
 
   // Allowed to give info
   console.log(patientData.getInfo()); 
- 
 
   // Not allowed to give info
   console.log(patientData.getSSN());   
