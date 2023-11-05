@@ -67,21 +67,27 @@ programmer.prototype = Object.create(person.prototype);
 
 
 programmer.prototype.completeTask=function(){
- this.busy = false;
+ this.busy = true;
 }
 programmer.prototype.acceptNewTask=function(){
-  this.busy = true;
+  this.busy = false;
 }
 
-programmer.prototype.offerNewTask=function(){
-  if (programmer.prototype.completeTask===true) {
+programmer.prototype.offerNewTask=function(){ programmer.prototype.completeNewTask ?
+  console.log(`Unfortunately, ${this.name} can't accept any new tasks right now.`) :
+  console.log(`${this.name} would love to take on a new responsibility.`);
+  }
+
+  
+  
+  /*if (programmer.prototype.completeTask===true) {
     console.log(`Unfortunately, ${this.name} can't accept any new tasks right now.`);
   } 
   else {
     console.log(`${this.name} would love to take on a new responsibility.`);
   }
 }
-
+*/
 
 programmer.prototype.learnLanguage = function(language) {
   this.languages.push(language);
